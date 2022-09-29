@@ -1,0 +1,250 @@
+golang-github-spf13-viper (1.8.1-1) unstable; urgency=medium
+
+  * New upstream version 1.8.1
+  * Change Section from devel to golang
+  * Bump Standards-Version to 4.6.0 (no change)
+  * Mark library package with "Multi-Arch: foreign"
+  * Update versioned dependencies as per go.mod
+  * Revert "Add patch to fix test with mapstructure 1.3.2"
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Oct 2021 03:45:04 -0600
+
+golang-github-spf13-viper (1.7.1-1) unstable; urgency=medium
+
+  * New upstream version 1.7.1
+
+ -- Anthony Fok <foka@debian.org>  Fri, 18 Sep 2020 21:10:23 -0600
+
+golang-github-spf13-viper (1.7.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.7.0
+  * Drop golang-github-xordataexchange-crypt-dev (Closes: #883295)
+    To break circular dependency of etcd
+  * Drop golang-github-stretchr-testify-dev from -dev Depends.
+    This is only used for testing
+  * Bump debhelper-compat to 13
+  * Add patch to fix test with mapstructure 1.3.2 (Closes: #963271)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 27 Jun 2020 19:39:17 +0800
+
+golang-github-spf13-viper (1.6.1-1) unstable; urgency=medium
+
+  * New upstream version 1.6.1
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Update dependencies according to go.mod
+
+ -- Anthony Fok <foka@debian.org>  Fri, 21 Feb 2020 03:47:03 -0700
+
+golang-github-spf13-viper (1.4.0-1) unstable; urgency=medium
+
+  * New upstream version 1.4.0
+  * Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+  * Remove old 000-use-GetInt64-for-largenum-in-viper_test-go.patch
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Jul 2019 03:57:43 -0600
+
+golang-github-spf13-viper (1.3.2+really1.3.2-1) unstable; urgency=medium
+
+  * Revert to upstream version 1.3.2 now that Debian 10 "buster" is released.
+    See https://bugs.debian.org/928227 for background information.
+  * Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Fri, 12 Jul 2019 07:12:49 -0600
+
+golang-github-spf13-viper (1.3.2+really1.3.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Revert all changes between 1.3.2-2 and 1.3.1-1.
+    See https://bugs.debian.org/928227 for a rationale.
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 01 Jun 2019 23:09:21 +0200
+
+golang-github-spf13-viper (1.3.2-2) unstable; urgency=medium
+
+  * Use GetInt64 for largenum in viper_test.go to fix "constant
+    765432101234567 overflows int" regression error on 32-bit platforms.
+    See https://github.com/spf13/viper/issues/704 for more information.
+  * Build-Depends on dh-golang (>= 1.39~) for go.mod and go.sum inclusion
+    instead of my previous use of DH_GOLANG_INSTALL_EXTRA.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 24 May 2019 13:00:09 -0600
+
+golang-github-spf13-viper (1.3.2-1) unstable; urgency=medium
+
+  * New upstream version 1.3.2
+  * Bump Standards-Version to 4.3.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Apr 2019 03:44:26 -0600
+
+golang-github-spf13-viper (1.3.1-1) unstable; urgency=medium
+
+  * New upstream version 1.3.1
+  * Install go.mod and go.sum
+  * Remove patch "Make test pass with new mitchellh/mapstructure version"
+    which has been applied to upstream 1.3.1.
+
+ -- Anthony Fok <foka@debian.org>  Mon, 24 Dec 2018 05:29:43 -0700
+
+golang-github-spf13-viper (1.2.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.2.1
+    - Remove patch, has been applied upstream
+    - New patch: Make test pass with new mitchellh/mapstructure version.
+  * Update team name
+  * Update to Standards-Version 4.2.1, no changes needed
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 15 Nov 2018 10:21:35 +0100
+
+golang-github-spf13-viper (1.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.1.0
+    - Refresh patch
+  * Update Standards-Version to 4.2.0, no changes needed
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 24 Aug 2018 23:37:12 +0200
+
+golang-github-spf13-viper (1.0.2-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Team upload.
+  * Point Vcs-* urls to salsa.debian.org
+
+  [ Dr. Tobias Quathamer ]
+  * Use debhelper v11
+  * Update to Standards-Version 4.1.3
+  * New upstream version 1.0.2
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Wed, 04 Apr 2018 14:22:56 +0200
+
+golang-github-spf13-viper (1.0.0+git20171109.4dddf7c-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.0.0+git20171109.4dddf7c
+    - Refresh patch
+  * Update to Standards-Version 4.1.1
+    - Use Priority: optional
+  * Update d/copyright
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 24 Nov 2017 14:58:10 +0100
+
+golang-github-spf13-viper (0.0~git20170619.0.c1de958-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+  * Refresh 0001-Fix-FTBFS-on-32-bit-architectures.patch
+  * Update package description as per upstream README.md
+
+ -- Anthony Fok <foka@debian.org>  Fri, 21 Jul 2017 04:26:07 -0600
+
+golang-github-spf13-viper (0.0~git20161213.0.5ed0fc3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix FTBFS on 32 bit architectures. (Closes: #860678)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Wed, 26 Apr 2017 21:57:34 +0200
+
+golang-github-spf13-viper (0.0~git20161213.0.5ed0fc3-2) unstable; urgency=medium
+
+  * Remove double escape backslashes from debian/watch
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Jan 2017 02:05:21 -0700
+
+golang-github-spf13-viper (0.0~git20161213.0.5ed0fc3-1) unstable; urgency=medium
+
+  * New upstream snapshot: Fix MergeInConfig error return
+
+ -- Anthony Fok <foka@debian.org>  Thu, 29 Dec 2016 02:01:55 -0700
+
+golang-github-spf13-viper (0.0~git20161029.0.651d9d9-1) unstable; urgency=medium
+
+  [ Anthony Fok ]
+  * Team upload.
+  * Add debian/watch file
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Dr. Tobias Quathamer ]
+  * Imported Upstream version 0.0~git20161029.0.651d9d9
+  * Update Build-Depends
+  * Use debhelper v10
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 04 Dec 2016 12:00:53 +0100
+
+golang-github-spf13-viper (0.0~git20160605.0.c1ccc37-1) unstable; urgency=medium
+
+  * New upstream version for Hugo v0.16
+  * Refresh package dependencies in debian/control:
+    - Replace golang-go with golang-any in Build-Depends
+    - Remove old transition alternatives golang-toml-dev and
+      golang-pretty-dev
+
+ -- Anthony Fok <foka@debian.org>  Sat, 11 Jun 2016 13:15:55 -0600
+
+golang-github-spf13-viper (0.0~git20160420.0.f904a17-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Update debian/control
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URL for Vcs-Git too
+    - Rename golang-github-go-fsnotify-fsnotify-dev to
+      golang-github-fsnotify-fsnotify-dev
+    - Remove "golang-go | gccgo" from Depends
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Apr 2016 12:13:23 +0800
+
+golang-github-spf13-viper (0.0~git20160111.0.a212099-1) unstable; urgency=medium
+
+  * New upstream snapshot:
+    - Handle the case Get() returns either map[interface{}]interface{} or
+      map[string]interface{}
+    - Fix config watch
+    - Watch the entire config dir for changes
+  * Allow package to be installed with gccgo where golang-go is unavailable
+  * Update debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Fri, 15 Jan 2016 13:04:01 -0700
+
+golang-github-spf13-viper (0.0~git20151224.0.110492b-1) unstable; urgency=medium
+
+  * New upstream snapshot:
+    - Add Sub() for Viper, which returns a branch of a Viper instance.
+    - Add FlagValue interface to support other flag systems.
+    - Add information about flag interfaces to the readme file.
+    - Adds MergeConfig functionality
+    - Bugfix for Nested Key Casing
+
+ -- Anthony Fok <foka@debian.org>  Thu, 24 Dec 2015 09:50:16 -0700
+
+golang-github-spf13-viper (0.0~git20151215.0.79971f1-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Add dependency on golang-github-hashicorp-hcl-dev
+
+ -- Anthony Fok <foka@debian.org>  Thu, 17 Dec 2015 05:02:21 -0700
+
+golang-github-spf13-viper (0.0~git20151110.0.e37b56e-1) unstable; urgency=medium
+
+  * New upstream snapshot: Add dynamic reading of config file support,
+    in two new methods, viper.WatchConfig and viper.OnConfigChange,
+    that are now used by Hugo.
+  * (Build-)Depends on golang-github-go-fsnotify-fsnotify-dev,
+    which provides "gopkg.in/fsnotify.v1" as required by this new
+    upstream snapshot.
+  * Swap Build-Depends relation ordering to appease buildds.
+  * Change "MIT" to "Expat" in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Nov 2015 19:10:15 -0700
+
+golang-github-spf13-viper (0.0~git20150908.0.1967d93-1) unstable; urgency=medium
+
+  * Initial release (Closes: #799740)
+
+ -- Anthony Fok <foka@debian.org>  Tue, 22 Sep 2015 13:52:30 -0600

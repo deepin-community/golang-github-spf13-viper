@@ -4,4 +4,4 @@ export DH_GOLANG_EXCLUDES := remote
 export DH_GOLANG_EXCLUDES_ALL := 0
 
 %:
-	dh $@ --buildsystem=golang --with=golang
+	dh $@ --builddirectory=_build --buildsystem=golang

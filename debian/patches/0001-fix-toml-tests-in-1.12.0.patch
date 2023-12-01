@@ -1,0 +1,29 @@
+commit 601ec815baa479aec40c4b7eb20fe38acf999d02
+Author: Mark Sagi-Kazar <mark.sagikazar@gmail.com>
+Date:   Sat Sep 3 13:52:36 2022 +0200
+
+    test: fix toml tests
+    
+    Signed-off-by: Mark Sagi-Kazar <mark.sagikazar@gmail.com>
+
+diff --git a/internal/encoding/toml/codec2_test.go b/internal/encoding/toml/codec2_test.go
+index c9dac62..5cf3f34 100644
+--- a/internal/encoding/toml/codec2_test.go
++++ b/internal/encoding/toml/codec2_test.go
+@@ -31,6 +31,7 @@ list = [
+ // encoded form of the data
+ const encoded = `key = 'value'
+ list = ['item1', 'item2', 'item3']
++
+ [map]
+ key = 'value'
+ 
+@@ -38,8 +39,6 @@ key = 'value'
+ [nested_map.map]
+ key = 'value'
+ list = ['item1', 'item2', 'item3']
+-
+-
+ `
+ 
+ // Viper's internal representation

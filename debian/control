@@ -1,50 +1,54 @@
 Source: golang-github-spf13-viper
+Section: golang
+Priority: optional
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Uploaders: Anthony Fok <foka@debian.org>,
            Tim Potter <tpot@hpe.com>,
-Section: golang
-Testsuite: autopkgtest-pkg-go
-Priority: optional
+Rules-Requires-Root: no
 Build-Depends: debhelper-compat (= 13),
-               dh-golang (>= 1.39~),
-               golang-any,
-               golang-github-fsnotify-fsnotify-dev (>= 1.4.9),
+               dh-sequence-golang,
+               golang-any (>= 2:1.17~),
+               golang-github-fsnotify-fsnotify-dev (>= 1.5.4),
                golang-github-hashicorp-hcl-dev (>= 1.0.0),
-               golang-github-magiconair-properties-dev (>= 1.8.5),
-               golang-github-mitchellh-mapstructure-dev (>= 1.4.1),
-               golang-github-pelletier-go-toml-dev (>= 1.9.3),
-               golang-github-spf13-afero-dev (>= 1.6.0),
-               golang-github-spf13-cast-dev (>= 1.3.1),
+               golang-github-magiconair-properties-dev (>= 1.8.6),
+               golang-github-mitchellh-mapstructure-dev (>= 1.5.0),
+               golang-github-pelletier-go-toml-dev (>= 1.9.5),
+               golang-github-pelletier-go-toml.v2-dev (>= 2.0.1),
+               golang-github-spf13-afero-dev (>= 1.8.2),
+               golang-github-spf13-cast-dev (>= 1.5.0),
                golang-github-spf13-jwalterweatherman-dev (>= 1.1.0),
                golang-github-spf13-pflag-dev (>= 1.0.5),
-               golang-github-stretchr-testify-dev (>= 1.7.0),
-               golang-github-subosito-gotenv-dev (>= 1.2.0),
-               golang-gopkg-ini.v1-dev (>= 1.62.0),
+               golang-github-stretchr-testify-dev (>= 1.7.1),
+               golang-github-subosito-gotenv-dev (>= 1.3.0),
+               golang-gopkg-ini.v1-dev (>= 1.66.4),
                golang-gopkg-yaml.v2-dev (>= 2.4.0),
-Standards-Version: 4.6.0
+               golang-gopkg-yaml.v3-dev (>= 3.0.0),
+Testsuite: autopkgtest-pkg-go
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-spf13-viper
 Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-spf13-viper.git
 Homepage: https://github.com/spf13/viper
-Rules-Requires-Root: no
 XS-Go-Import-Path: github.com/spf13/viper
 
 Package: golang-github-spf13-viper-dev
 Architecture: all
 Multi-Arch: foreign
-Depends: golang-github-fsnotify-fsnotify-dev (>= 1.4.9),
+Depends: golang-github-fsnotify-fsnotify-dev (>= 1.5.4),
          golang-github-hashicorp-hcl-dev (>= 1.0.0),
-         golang-github-magiconair-properties-dev (>= 1.8.5),
-         golang-github-mitchellh-mapstructure-dev (>= 1.4.1),
-         golang-github-pelletier-go-toml-dev (>= 1.9.3),
-         golang-github-spf13-afero-dev (>= 1.6.0),
-         golang-github-spf13-cast-dev (>= 1.3.1),
+         golang-github-magiconair-properties-dev (>= 1.8.6),
+         golang-github-mitchellh-mapstructure-dev (>= 1.5.0),
+         golang-github-pelletier-go-toml-dev (>= 1.9.5),
+         golang-github-pelletier-go-toml.v2-dev (>= 2.0.1),
+         golang-github-spf13-afero-dev (>= 1.8.2),
+         golang-github-spf13-cast-dev (>= 1.5.0),
          golang-github-spf13-jwalterweatherman-dev (>= 1.1.0),
          golang-github-spf13-pflag-dev (>= 1.0.5),
-         golang-github-subosito-gotenv-dev (>= 1.2.0),
-         golang-gopkg-ini.v1-dev (>= 1.62.0),
+         golang-github-stretchr-testify-dev (>= 1.7.1),
+         golang-github-subosito-gotenv-dev (>= 1.3.0),
+         golang-gopkg-ini.v1-dev (>= 1.66.4),
          golang-gopkg-yaml.v2-dev (>= 2.4.0),
+         golang-gopkg-yaml.v3-dev (>= 3.0.0),
          ${misc:Depends},
-         ${shlibs:Depends},
 Description: Go configuration with fangs
  Viper is a complete configuration solution for Go applications
  including 12-Factor apps.  It is designed to work within an application,

@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: viper
 Source: https://github.com/spf13/viper
+Upstream-Name: viper
 
 Files: *
 Copyright: 2014–2017 Steve Francia <steve.francia@gmail.com>

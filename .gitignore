@@ -1,1 +1,5 @@
-.pc/
+/.idea/
+/bin/
+/build/
+/var/
+/vendor/

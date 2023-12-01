@@ -1,0 +1,20 @@
+commit 57cc9a000f5fe0ec654d189958b66f20f31fd21a
+Author: Mark Sagi-Kazar <mark.sagikazar@gmail.com>
+Date:   Tue Sep 6 11:20:52 2022 +0200
+
+    test: fix ini tests
+    
+    Signed-off-by: Mark Sagi-Kazar <mark.sagikazar@gmail.com>
+
+diff --git a/internal/encoding/ini/codec_test.go b/internal/encoding/ini/codec_test.go
+index ca48617..e54812c 100644
+--- a/internal/encoding/ini/codec_test.go
++++ b/internal/encoding/ini/codec_test.go
+@@ -20,7 +20,6 @@ const encoded = `key=value
+ 
+ [map]
+ key=value
+-
+ `
+ 
+ // decoded form of the data

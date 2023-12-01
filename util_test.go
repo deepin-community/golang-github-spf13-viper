@@ -58,6 +58,8 @@ func TestCopyAndInsensitiviseMap(t *testing.T) {
 }
 
 func TestAbsPathify(t *testing.T) {
+	skipWindows(t)
+
 	home := userHomeDir()
 	homer := filepath.Join(home, "homer")
 	wd, _ := os.Getwd()
@@ -85,7 +87,7 @@ func TestAbsPathify(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		got := absPathify(test.input)
+		got := absPathify(jwwLogger{}, test.input)
 		if got != test.output {
 			t.Errorf("Got %v\nexpected\n%q", got, test.output)
 		}
